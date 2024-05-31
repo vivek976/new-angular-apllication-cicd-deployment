@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:905418108527:task-definition/ecr-task-def:6",
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:905418108527:task-definition/ecr-task-def:9",
     "containerDefinitions": [
         {
             "name": "ecs-first-container",
-            "image": "905418108527.dkr.ecr.eu-north-1.amazonaws.com/vivek2120:bed2f54161804be493768e4f2999a05fb8fafd3b",
+            "image": "905418108527.dkr.ecr.eu-north-1.amazonaws.com/vivek2120:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -27,8 +25,7 @@
                     "awslogs-group": "/ecs/ecr-task-def",
                     "awslogs-region": "eu-north-1",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             },
             "systemControls": []
         }
@@ -37,7 +34,7 @@
     "taskRoleArn": "arn:aws:iam::905418108527:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::905418108527:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 6,
+    "revision": 9,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -83,7 +80,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-05-31T11:19:22.096Z",
-    "registeredBy": "arn:aws:iam::905418108527:root",
+    "registeredAt": "2024-05-31T11:36:31.571Z",
+    "registeredBy": "arn:aws:iam::905418108527:user/vivek",
     "tags": []
 }
