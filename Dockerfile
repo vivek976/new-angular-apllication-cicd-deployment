@@ -14,7 +14,7 @@ RUN npm install -g @angular/cli@12.2.18
 RUN npm install
 
 # Make port 80 available to the world outside this container
-EXPOSE 80
+EXPOSE 85
 
 # Define the command to run the Angular application
-CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "80"]
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "85"]
