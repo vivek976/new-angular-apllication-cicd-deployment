@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:905418108527:task-definition/task-def:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:905418108527:task-definition/demo:7",
     "containerDefinitions": [
         {
-            "name": "vivekscontainer",
+            "name": "demo",
             "image": "905418108527.dkr.ecr.eu-north-1.amazonaws.com/vivek2120:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "vivekscontainer-80-tcp",
+                    "name": "demo-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/task-def",
+                    "awslogs-group": "/ecs/demo",
                     "awslogs-region": "eu-north-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -33,10 +33,11 @@
             "systemControls": []
         }
     ],
-    "family": "task-def",
+    "family": "demo",
+    "taskRoleArn": "arn:aws:iam::905418108527:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::905418108527:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 7,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -51,6 +52,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -79,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-05-31T12:22:35.254Z",
+    "registeredAt": "2024-06-03T18:39:38.354Z",
     "registeredBy": "arn:aws:iam::905418108527:root",
     "tags": []
 }
