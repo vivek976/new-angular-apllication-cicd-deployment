@@ -17,4 +17,4 @@ RUN npm install
 EXPOSE 80
 
 # Define the command to run the Angular application
-CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "80"]
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "80","--disable-host-check"]
