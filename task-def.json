@@ -1,15 +1,15 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:905418108527:task-definition/demo:7",
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-3:533267216139:task-definition/vivektaskdef:1",
     "containerDefinitions": [
         {
-            "name": "demo",
-            "image": "905418108527.dkr.ecr.eu-north-1.amazonaws.com/vivek2120:latest",
+            "name": "vivekscontainer",
+            "image": "533267216139.dkr.ecr.eu-west-3.amazonaws.com/vivek2120:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "demo-80-tcp",
-                    "containerPort": 80,
-                    "hostPort": 80,
+                    "name": "vivekscontainer-8081-tcp",
+                    "containerPort": 8081,
+                    "hostPort": 8081,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
@@ -23,9 +23,9 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
+                    "awslogs-group": "/ecs/vivektaskdef",
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/demo",
-                    "awslogs-region": "eu-north-1",
+                    "awslogs-region": "eu-west-3",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
@@ -33,11 +33,10 @@
             "systemControls": []
         }
     ],
-    "family": "demo",
-    "taskRoleArn": "arn:aws:iam::905418108527:role/ecsTaskExecutionRole",
-    "executionRoleArn": "arn:aws:iam::905418108527:role/ecsTaskExecutionRole",
+    "family": "vivektaskdef",
+    "executionRoleArn": "arn:aws:iam::533267216139:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 7,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -52,9 +51,6 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -83,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-06-03T18:39:38.354Z",
-    "registeredBy": "arn:aws:iam::905418108527:root",
+    "registeredAt": "2024-06-14T13:44:03.225Z",
+    "registeredBy": "arn:aws:iam::533267216139:root",
     "tags": []
 }
