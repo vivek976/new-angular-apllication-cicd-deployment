@@ -18,3 +18,4 @@ EXPOSE 4250
 
 # Define the command to run the Angular application
 CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4250","--disable-host-check"]
+ 
