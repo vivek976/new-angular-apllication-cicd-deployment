@@ -22,7 +22,7 @@ export class AppComponent implements OnInit
   topics=['angular','react','vue'];
   public getMethod()
   {
-    this.http.get("http://newloadbalancer-1128782211.eu-north-1.elb.amazonaws.com:5500/api/v1/register",{ responseType: 'text' }).subscribe((data)=>{
+    this.http.get("http://demoalbforbackend-1754891251.eu-west-3.elb.amazonaws.com/api/v1/register",{ responseType: 'text' }).subscribe((data)=>{
       this.getJsonValue=data;
     },
     (error) => {
