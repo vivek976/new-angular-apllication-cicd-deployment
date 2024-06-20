@@ -11,7 +11,7 @@ COPY . /app
 RUN npm install -g @angular/cli@12.2.18
 
 # Install project dependencies
-RUN npm install
+RUN npm install 
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
